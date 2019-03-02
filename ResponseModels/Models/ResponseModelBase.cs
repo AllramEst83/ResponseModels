@@ -6,9 +6,17 @@ namespace ResponseModels.Models
 {
     public class ResponseModelBase
     {
-        public ResponseModelBase(int _statusCode = 0)
+        public ResponseModelBase(
+            int _statusCode = 0, 
+            string _error = "", 
+            string _description = "", 
+            string _code = ""
+            )
         {
             StatusCode = _statusCode;
+            Error = _error;
+            Description = _description;
+            Code = _code;
         }
 
         public int StatusCode { get; set; }
