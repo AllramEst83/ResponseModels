@@ -1,13 +1,12 @@
 ﻿using ResponseModels.Models;
-using System.Collections.Generic;
 
 namespace ResponseModels.ViewModels
 {
-    public class GetAllRolesResponse : ResponseModelBase
+    public class DeleteUserResponse : ResponseModelBase
     {
-        public GetAllRolesResponse(){ }
+        public DeleteUserResponse() { }
 
-        public GetAllRolesResponse(
+        public DeleteUserResponse(
             int _statusCode,
             string _error,
             string _description,
@@ -20,6 +19,8 @@ namespace ResponseModels.ViewModels
                 )
         { }
 
-        public List<GetAllRoles> ListOfAllRoles { get; set; }
+        
+        public string Id { get; set; }
+        public string Email { get; set; }
     }
 }
