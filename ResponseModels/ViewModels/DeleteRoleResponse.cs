@@ -1,7 +1,4 @@
 ﻿using ResponseModels.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ResponseModels.ViewModels
 {
@@ -9,18 +6,16 @@ namespace ResponseModels.ViewModels
     {
         public DeleteRoleResponse() { }
 
-        public DeleteRoleResponse(
-            int _statusCode,
-            string _error,
-            string _description,
-            string _code
-            ) : base(
+        public DeleteRoleResponse(string _roleName, string _roleId, int _statusCode, string _error, string _description, string _code) : base(
                 _statusCode,
                 _error,
                 _description,
                 _code
                 )
-        { }
+        {
+            RoleName = _roleName;
+            RoleId = _roleId;
+        }
 
         public string RoleName { get; set; }
         public string RoleId { get; set; }

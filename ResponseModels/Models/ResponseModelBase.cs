@@ -8,7 +8,7 @@
             string _description = "", 
             string _code = ""
             )
-        {
+        {            
             StatusCode = _statusCode;
             Error = _error;
             Description = _description;
