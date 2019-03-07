@@ -7,6 +7,9 @@ namespace ResponseModels.ViewModels
         public AddUserToRoleResponse() { }
 
         public AddUserToRoleResponse(
+            string _userId,
+            string _email,
+            string _role,
             int _statusCode,
             string _error,
             string _description,
@@ -17,7 +20,11 @@ namespace ResponseModels.ViewModels
                 _description,
                 _code
                 )
-        { }
+        {
+            UserId = _userId;
+            Email = _email;
+            Role = _role;
+        }
 
         public string UserId { get; set; }
         public string Email { get; set; }

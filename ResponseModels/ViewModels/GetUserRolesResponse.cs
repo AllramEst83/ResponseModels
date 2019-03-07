@@ -10,6 +10,9 @@ namespace ResponseModels.ViewModels
         public GetUserRolesResponse() { }
 
         public GetUserRolesResponse(
+            string _email,
+            List<string> _roles,
+            string userId,
             int _statusCode,
             string _error,
             string _description,
@@ -20,7 +23,11 @@ namespace ResponseModels.ViewModels
                 _description,
                 _code
                 )
-        { }
+        {
+            Email = _email;
+            Roles = _roles;
+            UserId = userId;
+        }
         public string Email { get; set; }
         public List<string> Roles { get; set; }
         public string UserId { get; set; }

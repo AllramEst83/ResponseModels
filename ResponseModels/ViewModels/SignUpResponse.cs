@@ -7,6 +7,8 @@ namespace ResponseModels.ViewModels
         public SignUpResponse() { }
 
         public SignUpResponse(
+            string _id,
+            string _email,
             int _statusCode,
             string _error,
             string _description,
@@ -17,7 +19,10 @@ namespace ResponseModels.ViewModels
                 _description,
                 _code
                 )
-        { }
+        {
+            Id = _id;
+            Email = _email;
+        }
 
         public string Id { get; set; }
         public string Email { get; set; }

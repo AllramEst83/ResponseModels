@@ -10,6 +10,8 @@ namespace ResponseModels.ViewModels
         public AddRoleResponse() { }
 
         public AddRoleResponse(
+            string _id,
+            string _role,
             int _statusCode,
             string _error,
             string _description,
@@ -20,7 +22,11 @@ namespace ResponseModels.ViewModels
                 _description,
                 _code
                 )
-        { }
+        {
+            Id = _id;
+            Role = _role;
+        }
+        public string Id { get; set; }
         public string Role { get; set; }
     }
 }
