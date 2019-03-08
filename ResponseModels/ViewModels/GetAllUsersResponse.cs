@@ -1,14 +1,16 @@
 ﻿using ResponseModels.Models;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace ResponseModels.ViewModels
 {
-    public class GetAllRolesResponse : ResponseModelBase
+   public class GetAllUsersResponse : ResponseModelBase
     {
-        public GetAllRolesResponse(){ }
+        public GetAllUsersResponse() { }
 
-        public GetAllRolesResponse(
-            List<GetAllRoles> _listOfRoles,
+        public GetAllUsersResponse(
+           List<UsersResponse> _listOfUsers,
             int _statusCode,
             string _error,
             string _description,
@@ -20,9 +22,9 @@ namespace ResponseModels.ViewModels
                 _code
                 )
         {
-            ListOfAllRoles = _listOfRoles;
+            ListOfAllUsers = _listOfUsers;
         }
 
-        public List<GetAllRoles> ListOfAllRoles { get; set; }
+        public List<UsersResponse> ListOfAllUsers { get; set; }
     }
 }
