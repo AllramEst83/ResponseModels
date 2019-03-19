@@ -8,7 +8,20 @@ namespace ResponseModels.ViewModels
    public class GetUserRolesResponse : ResponseModelBase
     {
         public GetUserRolesResponse() { }
-
+        public GetUserRolesResponse(
+               int _statusCode,
+            string _error,
+            string _description,
+            string _code
+            ) : base(
+                _statusCode,
+                _error,
+                _description,
+                _code
+                )
+        {
+                
+        }
         public GetUserRolesResponse(
             string _email,
             List<string> _roles,

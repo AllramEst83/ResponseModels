@@ -5,7 +5,19 @@ namespace ResponseModels.ViewModels
    public class AddUserToRoleResponse : ResponseModelBase
     {
         public AddUserToRoleResponse() { }
+        public AddUserToRoleResponse(int _statusCode,
+            string _error,
+            string _description,
+            string _code
+            ) : base(
+                _statusCode,
+                _error,
+                _description,
+                _code
+                )
+        {
 
+        }
         public AddUserToRoleResponse(
             string _userId,
             string _email,

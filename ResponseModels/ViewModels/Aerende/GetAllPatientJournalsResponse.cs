@@ -1,15 +1,18 @@
-﻿using ResponseModels.Models;
+﻿using ResponseModels.DatabaseModels;
+using ResponseModels.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ResponseModels.ViewModels
+namespace ResponseModels.ViewModels.Aerende
 {
-   public class GetAllUsersResponse : ResponseModelBase
+  public  class GetAllPatientJournalsResponse : ResponseModelBase
     {
-        public GetAllUsersResponse() { }
-        public GetAllUsersResponse(
-               int _statusCode,
+        public GetAllPatientJournalsResponse()
+        {
+
+        }
+        public GetAllPatientJournalsResponse(int _statusCode,
             string _error,
             string _description,
             string _code
@@ -22,8 +25,10 @@ namespace ResponseModels.ViewModels
         {
 
         }
-        public GetAllUsersResponse(
-           List<UsersResponse> _listOfUsers,
+        public GetAllPatientJournalsResponse(
+
+            List<PatientJournal> _patientJournals,
+
             int _statusCode,
             string _error,
             string _description,
@@ -35,9 +40,9 @@ namespace ResponseModels.ViewModels
                 _code
                 )
         {
-            ListOfAllUsers = _listOfUsers;
+            PatientJournals = _patientJournals;
         }
 
-        public List<UsersResponse> ListOfAllUsers { get; set; }
+        public List<PatientJournal> PatientJournals { get; set; }
     }
 }

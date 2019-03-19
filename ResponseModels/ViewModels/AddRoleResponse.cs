@@ -8,7 +8,19 @@ namespace ResponseModels.ViewModels
    public class AddRoleResponse : ResponseModelBase
     {
         public AddRoleResponse() { }
-
+        public AddRoleResponse(int _statusCode,
+            string _error,
+            string _description,
+            string _code
+            ) : base(
+                _statusCode,
+                _error,
+                _description,
+                _code
+                )
+        {
+                
+        }
         public AddRoleResponse(
             string _id,
             string _role,

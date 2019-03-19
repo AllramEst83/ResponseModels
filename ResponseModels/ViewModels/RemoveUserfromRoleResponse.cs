@@ -8,7 +8,20 @@ namespace ResponseModels.ViewModels
    public class RemoveUserfromRoleResponse : ResponseModelBase
     {
         public RemoveUserfromRoleResponse() { }
+        public RemoveUserfromRoleResponse(
+               int _statusCode,
+            string _error,
+            string _description,
+            string _code
+            ) : base(
+                _statusCode,
+                _error,
+                _description,
+                _code
+                )
+        {
 
+        }
         public RemoveUserfromRoleResponse(
             int _statusCode,
             string _error,
