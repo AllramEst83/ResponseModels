@@ -12,7 +12,9 @@ namespace ResponseModels.ViewModels.Aerende
         {
 
         }
-        public GetAllPatientJournalsResponse(int _statusCode,
+
+        public GetAllPatientJournalsResponse(
+            int _statusCode,
             string _error,
             string _description,
             string _code
