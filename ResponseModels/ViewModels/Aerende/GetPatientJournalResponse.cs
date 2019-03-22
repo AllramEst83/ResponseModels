@@ -1,14 +1,18 @@
-﻿using ResponseModels.Models;
+﻿using ResponseModels.DatabaseModels;
+using ResponseModels.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ResponseModels.ViewModels
+namespace ResponseModels.ViewModels.Aerende
 {
-   public class AddRoleResponse : ResponseModelBase
+   public class GetPatientJournalResponse : ResponseModelBase
     {
-        public AddRoleResponse() { }
-        public AddRoleResponse(
+        public GetPatientJournalResponse()
+        {
+
+        }
+        public GetPatientJournalResponse(
             int _statusCode,
             string _error,
             string _description,
@@ -20,11 +24,12 @@ namespace ResponseModels.ViewModels
                 _code
                 )
         {
-                
+
         }
-        public AddRoleResponse(
-            string _id,
-            string _role,
+        public GetPatientJournalResponse(
+            
+            PatientJournal _patientJournal,
+
             int _statusCode,
             string _error,
             string _description,
@@ -36,10 +41,9 @@ namespace ResponseModels.ViewModels
                 _code
                 )
         {
-            Id = _id;
-            Role = _role;
+            PatientJournal = _patientJournal;
         }
-        public string Id { get; set; }
-        public string Role { get; set; }
+
+        public PatientJournal PatientJournal { get; set; }
     }
 }
